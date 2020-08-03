@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/mdb.min.css')
+    link(rel="stylesheet", href="/css/all.css")
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    
+    
+    .container.my-5.pt-5
+        != messages('message', locals)
+        if errors
+          each error , i in errors
+            div(class="alert alert-dismissible fade show alert-danger" role='alert')
+              strong #{error.msg}
+              button.close(type='button', data-dismiss='alert', aria-label='Close')
+                  span(aria-hidden='true') ×
+            
+        block content
+
+        // JQuery
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    // Bootstrap tooltips
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js')
+    // Bootstrap core JavaScript
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js')
+    // MDB core JavaScript
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js')
+
+

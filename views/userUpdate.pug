@@ -1,0 +1,30 @@
+extends layout
+
+block content
+ include navbar
+ div.text-left.mt-5#userUpteTop
+   .img_top
+       img(src=`/img/${music.file}`, alt="")
+   h1 
+     span Name: 
+     span.active= data
+   h2 
+     span Surname: 
+     span.active= music.surname
+   h2 
+     span Email-address: 
+     span.active= music.email
+   h2 
+     span Phone Number: 
+     span.active= music.number
+   h3 
+     span Time of Registration: 
+     span.active= music.data
+ div#userUpteBottom
+  if user
+    if user.id === music.name
+      a(href="/user/edit/"+music._id   ,  class="btn btn-outline-info btn-rounded waves-effect") Update
+      a(href="/user/delete/"+music._id  , class="btn btn-outline-danger btn-rounded waves-effect") Delete
+ 
+ 
+ 

@@ -1,0 +1,34 @@
+nav.mb-1.navbar.navbar-expand-lg.navbar-dark.orange.lighten-1.fixed-top
+     a.navbar-brand(href='#') Malumotlar Bazasi
+     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent-555'  aria-controls='navbarSupportedContent-555' aria-expanded='false' aria-label='Toggle navigation')
+         span.navbar-toggler-icon
+     #navbarSupportedContent-555.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+           if user
+            if isIndex
+                li.nav-item.active
+                    a.nav-link(href='/')
+                        | User
+            else
+                li.nav-item
+                    a.nav-link(href='/')
+                        | User
+           if isAdd
+               li.nav-item.active
+                   a.nav-link(href='/user') Home
+           else
+               li.nav-item
+                   a.nav-link(href='/user') Home
+        ul.navbar-nav.ml-auto.nav-flex-icons
+            li.nav-item.avatar
+                a.nav-link.p-0(href='#')
+                    img.rounded-circle.z-depth-0(src='https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg' alt='avatar image' height='35')
+            if user 
+              li.nav-item.pr-2.pl-3
+                   a.nav-link(href='/logout') Log Out
+            else        
+              li.nav-item.pr-2.pl-3
+                  a.nav-link(href='/register') Sign Up
+              li.nav-item.pl-2.pr-3
+                   a.nav-link(href='/login') Sign In
+                 

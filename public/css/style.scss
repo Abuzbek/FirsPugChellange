@@ -1,0 +1,83 @@
+.md-form {
+    label {
+        color: #fff ;
+        .btn-50{
+            margin-left: 40%;
+        }
+    }
+    label.btn{
+            margin-left: 25%;
+        
+    }
+    
+}
+
+li.nav-item.active {
+    background: #00ffea6e ;border-radius: 5px;
+}
+
+.img_top {
+    margin: 20px ;
+    margin-top: 50px;
+    width: 200px;
+    height: 200px ;
+    border-radius: 50%;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#cardFooter {
+    margin: -1.25rem ;margin-top:1.25rem;
+}
+#userUpteTop{
+      padding: 30px;
+      background-color: #2E2E2E;
+      color:white;
+      h1{
+          font-size: 25px;
+      }
+      h2{
+        font-size: 20px;
+      }
+      h3{
+        font-size: 20px;
+      }
+      span{
+          color:#00C851;
+          
+      }
+      span.active{
+        color:#3F729B
+      }
+}
+#userUpteBottom{
+    padding: 30px;
+    background-color: #424242;
+    color:white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.img_right{
+    position: absolute;
+    right: 10px;
+    top:50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    img{
+        width: 100%;
+        height: 100%; 
+        border-radius: 50%;
+
+    }
+}
+.alert-error{
+    color:white;
+    background-color: rgb(255, 208, 0);
+}

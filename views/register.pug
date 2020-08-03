@@ -1,0 +1,59 @@
+extends layout
+
+block content
+ include navbar
+ h1.text-center.my-5= title
+ section.form-dark
+  // Form without header
+  .card.card-image(style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table7.jpg'); width: 50rem; margin:auto")
+    .text-white.rgba-stylish-strong.py-5.px-5.z-depth-4
+      // Header
+      .text-center
+        h3.white-text.mb-5.mt-4.font-weight-bold
+          strong SIGN
+          a.green-text.font-weight-bold
+            strong  UP
+            // Body
+      form.col-12(action="/register", method="post") 
+        .row
+            .col-md-6
+                .md-form
+                    i.far.fa-user.prefix   
+                    input#Form-email4.form-control.white-text(type='text' , name="username")
+                    label(for='Form-email4') Your name
+            .col-md-6    
+                .md-form.pb-3
+                    i.far.fa-pencil-alt.prefix
+                    input#Form-sname5.form-control.white-text(type='text' name="surname")
+                    label(for='Form-sname5') Your surname
+        .row
+            .col-md-6
+                .md-form.pb-3
+                    i.far.fa-envelope.prefix
+                    input#Form-email5.form-control.white-text(type='email' name="email")
+                    label(for='Form-email5') Your email
+            .col-md-6
+                .md-form.pb-3
+                    i.far.fa-mobile-android.prefix
+                    input#Form-number5.form-control.white-text(type='text' name="number")
+                    label(for='Form-number5') Your number 
+        .row
+            .col-md-6
+                .md-form.pb-3
+                    i.far.fa-lock.prefix
+                    input#Form-number5.form-control.white-text(type='password' name="password")
+                    label(for='Form-number5') Your password
+            .col-md-6
+                .md-form.pb-3
+                    i.far.fa-key.prefix
+                    input#Form-number6.form-control.white-text(type='password' name="passwordTwo")
+                    label(for='Form-number6') Confirm password
+        .md-form.pb-3
+          i.far.fa-folder.prefix#folder(style="top:1.5rem")
+          input#Form-file6.form-control.white-text(type='file' name="file" style="display:none")
+          label.btn.btn-success.btn-rounded.btn-50(for='Form-file6' style="position:relative ; cursor:pointer; margin-left:40%" , ) Your photo      
+                // Grid row
+        .row.d-flex.align-items-center.mb-4
+          .text-center.mb-3.col-md-12
+              button.btn.btn-success.btn-block.btn-rounded.z-depth-1(type='submit') Sign in
+      

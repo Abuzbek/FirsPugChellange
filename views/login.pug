@@ -1,0 +1,28 @@
+extends layout
+
+block content
+ include navbar
+ h1.text-center.my-5= title
+ section.form-dark
+  // Form without header
+  .card.card-image(style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table7.jpg'); width: 34rem; margin:auto")
+    .text-white.rgba-stylish-strong.py-5.px-5.z-depth-4
+      // Header
+      .text-center
+        h3.white-text.mb-5.mt-4.font-weight-bold
+          strong LOGIN
+            // Body
+      form(action="/login", method="POST") 
+          .md-form.pb-3
+            i.far.fa-envelope.prefix
+            input#Form-email5.form-control.white-text(type='text' name="username")
+            label(for='Form-email5') Your name  
+          .md-form.pb-3
+            i.far.fa-lock.prefix
+            input#Form-number5.form-control.white-text(type='password' name="password")
+            label(for='Form-number5') Your password 
+                  // Grid row
+          .row.d-flex.align-items-center.mb-4
+            .text-center.mb-3.col-md-12
+                button.btn.btn-success.btn-block.btn-rounded.z-depth-1(type='submit') LOGIN
+      

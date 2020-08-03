@@ -1,0 +1,42 @@
+extends layout
+
+block content
+ include navbar
+ h1.text-center.my-5= title
+ section.form-dark
+  // Form without header
+  .card.card-image(style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table7.jpg'); width: 34rem; margin:auto")
+    .text-white.rgba-stylish-strong.py-5.px-5.z-depth-4
+      // Header
+      .text-center
+        h3.white-text.mb-5.mt-4.font-weight-bold
+          strong SIGN
+          a.green-text.font-weight-bold
+            strong  UP
+            // Body
+      form(action="/", method="post") 
+          .md-form
+            i.far.fa-user.prefix   
+            input#Form-email4.form-control.white-text(type='text' , name="name")
+            label(for='Form-email4') Your name
+          .md-form.pb-3
+            i.far.fa-pencil-alt.prefix
+            input#Form-sname5.form-control.white-text(type='text' name="surname")
+            label(for='Form-sname5') Your surname
+          .md-form.pb-3
+            i.far.fa-envelope.prefix
+            input#Form-email5.form-control.white-text(type='email' name="email")
+            label(for='Form-email5') Your email  
+          .md-form.pb-3
+            i.far.fa-mobile-android.prefix
+            input#Form-number5.form-control.white-text(type='text' name="number")
+            label(for='Form-number5') Your number 
+          .md-form.pb-3
+            i.far.fa-folder.prefix#folder(style="top:1.5rem")
+            input#Form-file5.form-control.white-text(type='file' name="file" style="display:none")
+            label.btn.btn-success.btn-rounded.ml-25(for='Form-file5' style="position:relative ; cursor:pointer" , ) Your photo      
+                  // Grid row
+          .row.d-flex.align-items-center.mb-4
+            .text-center.mb-3.col-md-12
+                button.btn.btn-success.btn-block.btn-rounded.z-depth-1(type='submit') Sign in
+      
