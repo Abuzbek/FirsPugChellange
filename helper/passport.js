@@ -5,7 +5,7 @@ const Reg = require('../model/Reg')
 const DbJson = require('../helper/db')
 module.exports = (passport) => {
     passport.use(new LocalStrategy(
-        function (username, password, done) {
+        function (username, password, done) { 
             Reg.findOne({ username: username }, function (err, user) {
                 console.log(user);
                 if (err) { return done(err); }

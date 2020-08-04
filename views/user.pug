@@ -2,33 +2,37 @@ extends layout
 
 block content
  include navbar
- h1.text-center.my-5= title
- .row
-  each music , i in musics
-    .col-lg-4.col-md-6.col-12
-        .card.card-cascade.wider.reverse
-            .view.view-cascade.overlay
-                img.card-img-top(src=`/img/${music.file}`, alt='Card image cap')
-                a(href='#!')
-                  .mask.rgba-white-slight
-            .card-body.card-body-cascade.text-center
-                //- h4.card-title
-                //- strong #{music.name}
-                h4.card-title
-                strong #{music.surname}
-                h6.font-weight-bold.indigo-text.py-2 #{music.email}
-                // Text
-                p.card-text #{music.number}
-                br
-                // Linkedin
-                a.px-2.fa-lg.li-ic
-                  i.fab.fa-linkedin-in
-                // Twitter
-                a.px-2.fa-lg.tw-ic
-                  i.fab.fa-twitter
-                // Dribbble
-                a.px-2.fa-lg.fb-ic
-                  i.fab.fa-facebook-f
-                a.card-footer.white.d-block#cardFooter(href=`/update/${music._id}`)  
-                  p(style="color:grey;") Uptodate
-            // Card
+ if user
+  h1.text-center.my-5= title
+  .row
+    each music , i in musics
+      .col-lg-4.col-md-6.col-12
+          .card.card-cascade.wider.reverse
+              .view.view-cascade.overlay
+                  img.card-img-top(src=`/img/${music.file}`, alt='Card image cap')
+                  a(href='#!')
+                    .mask.rgba-white-slight
+              .card-body.card-body-cascade.text-center
+                  h4.card-title
+                  strong #{music.name}
+                  h4.card-title
+                  strong #{music.surname}
+                  h6.font-weight-bold.indigo-text.py-2 #{music.email}
+                  // Text
+                  p.card-text #{music.number}
+                  br
+                  // Linkedin
+                  a.px-2.fa-lg.li-ic
+                    i.fab.fa-linkedin-in
+                  // Twitter
+                  a.px-2.fa-lg.tw-ic
+                    i.fab.fa-twitter
+                  // Dribbble
+                  a.px-2.fa-lg.fb-ic
+                    i.fab.fa-facebook-f
+                  a.card-footer.white.d-block#cardFooter(href=`/update/${music._id}`)  
+                    p(style="color:grey;") Uptodate
+              // Card
+ else
+   .container.d-flex.justify-content-center.align-items-center(style="height:70vh")
+    a.btn.btn-success.m-auto(href="/login") Oldin royhatdan o'ting         

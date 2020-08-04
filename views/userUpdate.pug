@@ -6,8 +6,11 @@ block content
    .img_top
        img(src=`/img/${music.file}`, alt="")
    h1 
+    span Account:
+    span.active= data   
+   h2 
      span Name: 
-     span.active= data
+     span.active= music.name
    h2 
      span Surname: 
      span.active= music.surname
@@ -22,7 +25,7 @@ block content
      span.active= music.data
  div#userUpteBottom
   if user
-    if user.id === music.name
+    if user.id === music.AccoundName
       a(href="/user/edit/"+music._id   ,  class="btn btn-outline-info btn-rounded waves-effect") Update
       a(href="/user/delete/"+music._id  , class="btn btn-outline-danger btn-rounded waves-effect") Delete
  

@@ -17,7 +17,7 @@ block content
       form(action="/user/edit/"+music._id, method="post") 
           .md-form
             i.far.fa-user.prefix   
-            input#Form-email4.form-control.white-text(type='text' , name="name" , value= data)
+            input#Form-email4.form-control.white-text(type='text' , name="name" , value= music.name)
             label(for='Form-email4') Your name
           .md-form.pb-3
             i.far.fa-pencil-alt.prefix
